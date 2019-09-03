@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="cn">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="gongchenghui">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+<meta name="keywords" content="github">
+
+
+<meta name="description" content="VuePressVuePress 由两部分组成：一个以 Vue 驱动的主题系统的简约静态网站生成工具，和一个为编写技术文档而优化的默认主题。它是为了支持 Vue 子项目的文档需求而创建的。
+由 ...">
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+    <!--Title-->
+
+<title>
+    
+    Vuepress从零开始 |
+    
+    gongchenghui
+</title>
+
+<link rel="alternate" href="/atom.xml" title="gongchenghui" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+</head></html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    https://img.58cdn.com.cn/escstatic/fecar/pmuse/docmanager/banner1.jpeg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='浅夏晴空'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                浅夏晴空
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">
+                        gongchenghui</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa "></i>
+                                主页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/tools/"><i class="fa "></i>
+                                工具</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa "></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Vuepress从零开始">
+            
+            Vuepress从零开始
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2019/09/03</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="VuePress"><a href="#VuePress" class="headerlink" title="VuePress"></a>VuePress</h2><p>VuePress 由两部分组成：一个以 Vue 驱动的主题系统的简约静态网站生成工具，和一个为编写技术文档而优化的默认主题。它是为了支持 Vue 子项目的文档需求而创建的。</p>
+<p>由 VuePress 生成的每个页面，都具有相应的预渲染静态 HTML，它们能提供出色的加载性能，并且对 SEO 友好。然而，页面加载之后，Vue 就会将这些静态内容，接管为完整的单页面应用程序(SPA)。当用户在浏览站点时，可以按需加载其他页面。</p>
+<p><a href="http://caibaojian.com/vuepress/guide/" target="_blank" rel="noopener">VuePress中文网</a></p>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>Node.js版本需要&gt;=8才可以。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g vuepress 或者在已有项目中安装</span><br><span class="line">npm install vuepress -D</span><br></pre></td></tr></table></figure>
+
+<p>安装完成检测是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vuepress -v</span><br><span class="line">//vuepress v1.0.3</span><br></pre></td></tr></table></figure>
+
+<p>其他信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">vuepress v1.0.3</span><br><span class="line"></span><br><span class="line">Usage:</span><br><span class="line">  $ vuepress &lt;command&gt; [options]</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  dev [targetDir]    start development server</span><br><span class="line">  build [targetDir]  build dir as static site</span><br><span class="line">  eject [targetDir]  copy the default theme into .vuepress/theme for customization.</span><br><span class="line">  info               Shows debugging information about the local environment</span><br><span class="line"></span><br><span class="line">For more info, run any command with the `--help` flag:</span><br><span class="line">  $ vuepress dev --help</span><br><span class="line">  $ vuepress build --help</span><br><span class="line">  $ vuepress eject --help</span><br><span class="line">  $ vuepress info --help</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -v, --version  Display version number </span><br><span class="line">  -h, --help     Display this message</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir VuePress</span><br><span class="line">cd VuePress</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h3><p>通过npm init快速创建项目的pageage.json文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;VuePress&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;&quot;,</span><br><span class="line">  &quot;main&quot;: &quot;index.js&quot;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;keywords&quot;: [],</span><br><span class="line">  &quot;author&quot;: &quot;&quot;,</span><br><span class="line">  &quot;license&quot;: &quot;ISC&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="新建docs文件夹"><a href="#新建docs文件夹" class="headerlink" title="新建docs文件夹"></a>新建docs文件夹</h3><p>docs文件夹作为项目文档根目录，主要放置Markdown类型的文章和.vuepress文件夹。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir docs</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置package-json"><a href="#设置package-json" class="headerlink" title="设置package.json"></a>设置package.json</h3><p>在script中添加dev启动和build打包脚本命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,</span><br><span class="line">    &quot;dev&quot;: &quot;vuepress dev docs&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;vuepress build docs&quot;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建README-md"><a href="#创建README-md" class="headerlink" title="创建README.md"></a>创建README.md</h3><p>在docs里面创建README.md</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd docs</span><br><span class="line">echo &quot;## Hello VuePress&quot; &gt; README.md</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建-vuepress目录"><a href="#创建-vuepress目录" class="headerlink" title="创建.vuepress目录"></a>创建.vuepress目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<p>可直接打包构建README.md文件 并生成.vuepress</p>
+<p> <code>.vuepress</code> 目录这是放置所有 VuePress 特有(VuePress-specific) 文件的地方。</p>
+<h3 id="创建config-js"><a href="#创建config-js" class="headerlink" title="创建config.js"></a>创建config.js</h3><p>不做任何配置的话，页面会显得过于简单，用户也无法方便地浏览网站；</p>
+<p>配置 VuePress 站点的基本文件是 <code>.vuepress/config.js</code>，其中导出一个 JavaScript 对象：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch config.js</span><br></pre></td></tr></table></figure>
+
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">├── docs # 文档目录</span><br><span class="line">│	├── .vuepress //存放所有资源和打包结果</span><br><span class="line">│   │ 		├── dist //打包结果</span><br><span class="line">│   │		├── public //公共资源文件</span><br><span class="line">│   │		├── ...</span><br><span class="line">│   │       └── config.js //配置文件</span><br><span class="line">│   ├── demo //分类文档存储</span><br><span class="line">│   │    ├── demo1.md</span><br><span class="line">│   │    ├── ...</span><br><span class="line">│   │    └── demon.md</span><br><span class="line">│   └── README.md </span><br><span class="line">└── package.json//项目启动配置</span><br></pre></td></tr></table></figure>
+
+<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    title: &apos;文档管理&apos;, </span><br><span class="line">    description: &apos;呵呵博客&apos;,</span><br><span class="line">    head: [</span><br><span class="line">        [&apos;link&apos;, &#123; rel: &apos;icon&apos;, href: &apos;/logo.ico&apos; &#125;]</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="title"><a href="#title" class="headerlink" title="title"></a>title</h3><ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>undefined</code></li>
+</ul>
+<p>网站的标题。这将是所有页面标题的前缀，并显示在默认主题的导航栏中。</p>
+<h3 id="description"><a href="#description" class="headerlink" title="description"></a>description</h3><ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>undefined</code></li>
+</ul>
+<p>网站描述。这将在页面 HTML 中表现为一个 <code>&lt;meta&gt;</code> 标签。</p>
+<h3 id="head"><a href="#head" class="headerlink" title="head"></a>head</h3><ul>
+<li>Type: <code>Array</code></li>
+<li>Default: <code>[]</code></li>
+</ul>
+<p>被注入页面 HTML <code>&lt;head&gt;</code> 额外的标签。每个标签可以用 <code>[tagName, { attrName: attrValue }, innerHTML?]</code> 的形式指定。例如，要添加自定义图标：</p>
+<h3 id="port"><a href="#port" class="headerlink" title="port"></a>port</h3><ul>
+<li>Type: <code>number</code></li>
+<li>Default: <code>8080</code></li>
+</ul>
+<p>指定用于 dev 服务器的端口。</p>
+<h3 id="dest"><a href="#dest" class="headerlink" title="dest"></a>dest</h3><ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>.vuepress/dist</code></li>
+</ul>
+<p>指定 <code>vuepress build</code> 的输出目录。</p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://img.58cdn.com.cn/escstatic/fecar/pmuse/publish/vp1.png" alt></p>
+<h2 id="导航配置"><a href="#导航配置" class="headerlink" title="导航配置"></a>导航配置</h2><h3 id="配置代码"><a href="#配置代码" class="headerlink" title="配置代码"></a>配置代码</h3><p>你可以通过 <code>themeConfig.nav</code> 将链接添加到导航栏中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  </span><br><span class="line">    themeConfig: &#123;</span><br><span class="line">        nav: [</span><br><span class="line">          &#123; text: &apos;主页&apos;, link: &apos;/&apos; &#125;,</span><br><span class="line">          &#123; text: &apos;测试&apos;, link: &apos;/test/test.md&apos; &#125;,</span><br><span class="line">          &#123; text: &apos;百度&apos;, link: &apos;https://www.baidu.com&apos; &#125;,</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以添加远程连接 如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; text: &apos;百度&apos;, link: &apos;https://www.baidu.com&apos; &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>也可以添加本地文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; text: &apos;测试&apos;, link: &apos;/test/test.md&apos; &#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h3><p><img src="https://img.58cdn.com.cn/escstatic/fecar/pmuse/publish/vp2.png" alt>  </p>
+<p><img src="https://img.58cdn.com.cn/escstatic/fecar/pmuse/publish/vp3.png" alt></p>
+<h2 id="侧边栏配置"><a href="#侧边栏配置" class="headerlink" title="侧边栏配置"></a>侧边栏配置</h2><h3 id="基本配置-1"><a href="#基本配置-1" class="headerlink" title="基本配置"></a>基本配置</h3><p>你可以省略 <code>.md</code> 扩展名，以 <code>/</code> 结尾的路径被推断为 <code>*/README.md</code> 。该链接的文本是自动推断的（从页面的第一个标题或 <code>YAML front matter</code> 中的显式标题）。如果你希望明确指定链接文本，请使用 <code>[link,text]</code> 形式的数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">themeConfig: &#123;</span><br><span class="line">    sidebar: [</span><br><span class="line">        [&apos;/&apos;, &apos;简介&apos;],</span><br><span class="line">        [&apos;/cst/cst.md&apos;, &apos;车商通&apos;],</span><br><span class="line">        [&apos;/new/index1.md&apos;, &apos;发布新框架&apos;],</span><br><span class="line">        [&apos;/feedback/feedback.md&apos;, &apos;问题反馈&apos;]</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：文件命名不要用index关键字</p>
+<p><img src="https://img.58cdn.com.cn/escstatic/fecar/pmuse/publish/vp5.png" alt></p>
+<h3 id="侧边栏组配置"><a href="#侧边栏组配置" class="headerlink" title="侧边栏组配置"></a>侧边栏组配置</h3><p>使用对象将侧边栏链接分成多个组：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">themeConfig: &#123;</span><br><span class="line">    sidebar: [</span><br><span class="line">        [&apos;/&apos;, &apos;简介&apos;],</span><br><span class="line">        &#123;</span><br><span class="line">            title: &quot;车商通&quot;,</span><br><span class="line">            collapsable: false,</span><br><span class="line">            children:[</span><br><span class="line">                [&apos;/cst/cst.md&apos;, &apos;车商通&apos;],</span><br><span class="line">                [&apos;/cst/draft.md&apos;, &apos;草稿箱&apos;],</span><br><span class="line">                [&apos;/cst/esc.md&apos;, &apos;二手车&apos;]</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            title: &quot;新框架&quot;,</span><br><span class="line">            collapsable: true,</span><br><span class="line">            children:[</span><br><span class="line">                [&apos;/new/testindex1.md&apos;, &apos;发布新框架&apos;],</span><br><span class="line">                [&apos;/new/local/entry.md&apos;, &apos;本地开发&apos;],</span><br><span class="line">                [&apos;/new/feedback/feedback.md&apos;, &apos;问题反馈&apos;]</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        [&apos;/feedback/feedback.md&apos;, &apos;问题反馈&apos;]</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>侧边栏组默认情况下是可折叠的。你可以强制一个组始终以 <code>collapsable：false</code> 打开。</p>
+<p><img src="https://img.58cdn.com.cn/escstatic/fecar/pmuse/publish/vp6.png" alt></p>
+<h2 id="多侧边栏"><a href="#多侧边栏" class="headerlink" title="多侧边栏"></a>多侧边栏</h2><p>如果你希望为不同的页面组显示不同的侧边栏，请先将页面组织到目录中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├─ README.md</span><br><span class="line">├─ cst</span><br><span class="line">│  ├─ README.md</span><br><span class="line">│  ├─ draft.md</span><br><span class="line">│  └─ esc.md</span><br><span class="line">└─ new</span><br><span class="line">   ├─ README.md</span><br><span class="line">   ├─ local/entry.md</span><br><span class="line">   └─ feedback/feedback.md</span><br></pre></td></tr></table></figure>
+
+<p>代码展示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">themeConfig: &#123;</span><br><span class="line">    nav: [</span><br><span class="line">        &#123; text: &apos;主页&apos;, link: &apos;/&apos; &#125;,</span><br><span class="line">        &#123; </span><br><span class="line">            text: &apos;技术&apos;,</span><br><span class="line">            items: [</span><br><span class="line">                &#123; text: &apos;车商通&apos;, link: &apos;/cst/&apos; &#125;,</span><br><span class="line">                &#123; text: &apos;新框架&apos;, link: &apos;/new/&apos; &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">      ],</span><br><span class="line">    sidebar: &#123;</span><br><span class="line">        &apos;/cst/&apos;: [</span><br><span class="line">            [&apos;&apos;, &apos;车商通&apos;],</span><br><span class="line">            [&apos;draft&apos;, &apos;草稿箱&apos;],</span><br><span class="line">            [&apos;esc&apos;, &apos;二手车&apos;]</span><br><span class="line">        ],</span><br><span class="line">        &apos;/new/&apos;: [</span><br><span class="line">            [&apos;&apos;, &apos;发布新框架&apos;],</span><br><span class="line">            [&apos;local/entry.md&apos;, &apos;本地开发&apos;],</span><br><span class="line">            [&apos;feedback/feedback.md&apos;, &apos;问题反馈&apos;]</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><img src="https://img.58cdn.com.cn/escstatic/fecar/pmuse/publish/vp7.png" alt></p>
+<p><img src="https://img.58cdn.com.cn/escstatic/fecar/pmuse/publish/vp8.png" alt></p>
+<p><code>注意：在本地开发时每个侧边栏目录里面都要有README文件，导航切换到每个目录下默认寻找README，否则直接展示不出来；并且配置sidebar时，每组的第一位直接写空字符串的key</code></p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    <a href="/2019/09/03/tsBase/" class="pre-post btn btn-default" title='TypeScript基础讲解'>
+        <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+        <span class="hidden-xs">
+            TypeScript基础讲解</span>
+    </a>
+    
+    
+    <a href="/2019/09/03/about/" class="next-post btn btn-default" title='about me'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            about me</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+
+<div id="comments">
+    
+
+<div id="vcomments" class="valine"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+<script>
+new Valine({
+    av: AV,
+    el: '#vcomments',
+    appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+    appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+    placeholder: '说点什么吧',
+    notify: false,
+    verify: true,
+    avatar: 'mm',
+    meta: 'nick,mail'.split(','),
+    pageSize: '10',
+    path: window.location.pathname,
+    lang: 'cn'.toLowerCase()
+})
+</script>
+
+
+</div>
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            Table of Contents
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VuePress"><span class="toc-text">VuePress</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境搭建"><span class="toc-text">环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建项目"><span class="toc-text">创建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化项目"><span class="toc-text">初始化项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新建docs文件夹"><span class="toc-text">新建docs文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置package-json"><span class="toc-text">设置package.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建README-md"><span class="toc-text">创建README.md</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建-vuepress目录"><span class="toc-text">创建.vuepress目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建config-js"><span class="toc-text">创建config.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目录结构"><span class="toc-text">目录结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本配置"><span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#title"><span class="toc-text">title</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#description"><span class="toc-text">description</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#head"><span class="toc-text">head</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#port"><span class="toc-text">port</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dest"><span class="toc-text">dest</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果"><span class="toc-text">效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导航配置"><span class="toc-text">导航配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置代码"><span class="toc-text">配置代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果-1"><span class="toc-text">效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#侧边栏配置"><span class="toc-text">侧边栏配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本配置-1"><span class="toc-text">基本配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#侧边栏组配置"><span class="toc-text">侧边栏组配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多侧边栏"><span class="toc-text">多侧边栏</span></a></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+</body>
+</html>
