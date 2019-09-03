@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html lang="cn">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="gongchenghui">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="theme-version" content="1.2.3">
+    <meta name="root" content="/">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+<meta name="keywords" content="github">
+
+
+<meta name="description" content="类型js类型JavaScript 的类型分为两种：原始数据类型（Primitive data types）和对象类型（Object types）。
+原始数据类型包括：布尔值、数值、字符串、nul...">
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+    <!--Title-->
+
+<title>
+    
+    TypeScript基础讲解 |
+    
+    gongchenghui
+</title>
+
+<link rel="alternate" href="/atom.xml" title="gongchenghui" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.7.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+    
+<div class="hide">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+
+
+
+
+    
+
+</head></html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+<body>
+    <header class="main-header"  style="background-image:url(
+    https://img.58cdn.com.cn/escstatic/fecar/pmuse/docmanager/banner1.jpeg)"
+     >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='浅夏晴空'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+            <!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+            <h2>
+                浅夏晴空
+            </h2>
+            
+        </div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                        <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">
+                        gongchenghui</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/"><i class="fa "></i>
+                                主页</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/tools/"><i class="fa "></i>
+                                工具</a>
+                        </li>
+                        
+                        <li role="presentation" class="text-center">
+                            <a href="/archives/"><i class="fa "></i>
+                                时间轴</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="TypeScript基础讲解">
+            
+            TypeScript基础讲解
+            
+        </h1>
+        <div class="post-meta">
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+        </span>
+    </span>
+    
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">
+            2019/09/03</span>
+    </span>
+    
+    
+</div>
+        
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><h3 id="js类型"><a href="#js类型" class="headerlink" title="js类型"></a>js类型</h3><p>JavaScript 的类型分为两种：原始数据类型（<a href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive" target="_blank" rel="noopener">Primitive data types</a>）和对象类型（Object types）。</p>
+<p>原始数据类型包括：布尔值、数值、字符串、<code>null</code>、<code>undefined</code> 以及 <a href="http://es6.ruanyifeng.com/#docs/symbol" target="_blank" rel="noopener">ES6 中的新类型 <code>Symbol</code></a>。</p>
+<p>在JavaScript中undefined，是全局作用于的一个属性，他会赋值给哪些声明但未初始化的变量；</p>
+<p>null是一个字面量（不是全局对象的一个属性），他可以赋值给哪些没有值得变量；</p>
+<h3 id="ts类型"><a href="#ts类型" class="headerlink" title="ts类型"></a>ts类型</h3><p>在TypeScript中我们可以使用undefined和null来定义两个原始类型数据：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let test: null = null;</span><br><span class="line">console.log(test); //null</span><br><span class="line">let test1: undefined = undefined;</span><br><span class="line">console.log(test1); //undefined</span><br></pre></td></tr></table></figure>
+
+<p><code>undefined</code> 和 <code>null</code> 是所有类型的子类型。也就是说 <code>undefined</code> 类型的变量，可以赋值给 所有类型的变量 如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let u1: undefined;</span><br><span class="line">let num1: number = u1;</span><br><span class="line">console.log(num1); //undefined</span><br></pre></td></tr></table></figure>
+
+<p>而 <code>void</code> 类型的变量不能赋值给 <code>number</code> 类型的变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let u: void;</span><br><span class="line">let num: number = u; //Type &apos;void&apos; is not assignable to type &apos;number&apos;.</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组类型"><a href="#数组类型" class="headerlink" title="数组类型"></a>数组类型</h3><p>在 TypeScript 中，数组类型有多种定义方式，比较灵活。</p>
+<p>最简单的方法是使用「类型 + 方括号」来表示数组：</p>
+<p>数组的项中不允许出现其他类型；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//正确</span><br><span class="line">let numArray: number[] = [1,2,3];</span><br><span class="line">let strArray: string[] = [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;];</span><br><span class="line">//Type &apos;string&apos; is not assignable to type &apos;number&apos;.</span><br><span class="line">let numArray: number[] = [&apos;1&apos;,2,3];</span><br></pre></td></tr></table></figure>
+
+<p>也可以使用数组泛型（Array Generic） <code>Array&lt;elemType&gt;</code> 来表示数组：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let objArray: Array&lt;object&gt; = [&#123;a:1&#125;,&#123;b:2&#125;];</span><br></pre></td></tr></table></figure>
+
+<h3 id="任意值any"><a href="#任意值any" class="headerlink" title="任意值any"></a>任意值any</h3><p>任意值（Any）用来表示允许赋值为任意类型。</p>
+<h4 id="any的定义"><a href="#any的定义" class="headerlink" title="any的定义"></a>any的定义</h4><p>如果是普通类型，在赋值过程中是不能改变类型的 如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let myTest: string = &apos;test&apos;;</span><br><span class="line">myTest = true; </span><br><span class="line">//Type &apos;true&apos; is not assignable to type &apos;string&apos;.</span><br></pre></td></tr></table></figure>
+
+<p>如果是any，允许被赋值为任意类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let myTest: any = &apos;test&apos;;</span><br><span class="line">myTest = true;</span><br><span class="line">console.log(myTest); //true</span><br></pre></td></tr></table></figure>
+
+<h4 id="any的属性"><a href="#any的属性" class="headerlink" title="any的属性"></a>any的属性</h4><p>在任意值上访问任何属性都是允许的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let anyThing: any = &apos;hello&apos;;</span><br><span class="line">console.log(anyThing.myName)</span><br></pre></td></tr></table></figure>
+
+<p>在声明变量声明是未指定类型，那么就会被识别成任意类型</p>
+<h3 id="类型推论"><a href="#类型推论" class="headerlink" title="类型推论"></a>类型推论</h3><p>如果没有明确的指定类型，那么 TypeScript 会依照类型推论（Type Inference）的规则推断出一个类型。如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let myType = &apos;one&apos;;</span><br><span class="line">myType = 1;//Type &apos;1&apos; is not assignable to type &apos;string&apos;.</span><br><span class="line">等价于</span><br><span class="line">let myType:string = &apos;one&apos;;</span><br><span class="line">myType = 1;//Type &apos;1&apos; is not assignable to type &apos;string&apos;.</span><br></pre></td></tr></table></figure>
+
+<p>TypeScript 会在没有明确的指定类型的时候推测出一个类型，这就是类型推论。</p>
+<p>如果定义时没有赋值，不管之后有没有赋值，都会被推断成any类型</p>
+<h2 id="联合类型"><a href="#联合类型" class="headerlink" title="联合类型"></a>联合类型</h2><p>TypeScript允许声明联合类型。联合类型类声明那些可以存储多种类型的变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let myType: string | number;</span><br><span class="line">myType = &apos;one&apos;; //one</span><br><span class="line">myType = 1;//1</span><br><span class="line">myType = true;//Type &apos;true&apos; is not assignable to type &apos;ReactText&apos;.</span><br></pre></td></tr></table></figure>
+
+<p>联合类型使用 <code>|</code> 分隔每个类型。</p>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="接口基础用法"><a href="#接口基础用法" class="headerlink" title="接口基础用法"></a>接口基础用法</h3><p>在面向对象语言中，接口（Interfaces）是一个很重要的概念，它是对行为的抽象，而具体如何行动需要由类（classes）去实现（implement）。</p>
+<p>TypeScript 中的接口是一个非常灵活的概念，除了可用于<a href>对类的一部分行为进行抽象</a>以外，也常用于对「对象的形状（Shape）」进行描述。</p>
+<p>定义一个变量myJson，类型时Person</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">interface Person &#123;</span><br><span class="line">    name:string;</span><br><span class="line">    age: number;</span><br><span class="line">&#125;</span><br><span class="line">//定义变量比接口少一些属性</span><br><span class="line">//Property &apos;age&apos; is missing in type &apos;&#123; name: string; &#125;&apos; but required in type &apos;Person&apos;.</span><br><span class="line">let myJson: Person = &#123;</span><br><span class="line">    name: &apos;jerry&apos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//定义的变量属性比接口多</span><br><span class="line">//Type &apos;&#123; name: string; age: number; other: string; &#125;&apos; is not assignable to type &apos;Person&apos;.</span><br><span class="line">  Object literal may only specify known properties, and &apos;other&apos; does not exist in type &apos;Person&apos;.</span><br><span class="line">let myJson: Person = &#123;</span><br><span class="line">    name: &apos;jerry&apos;,</span><br><span class="line">    age: 1,</span><br><span class="line">    other: &apos;test&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="可选属性"><a href="#可选属性" class="headerlink" title="可选属性"></a>可选属性</h3><p>接口里面的属性不全都是必需的，有些只是在某些条件下存在或者根本就不存在。</p>
+<p>可选属性在应用”option bags“模式时很常用，即给函数传入的对象中只有部分属性赋值了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">interface Person &#123;</span><br><span class="line">    name:string;</span><br><span class="line">    age?: number;</span><br><span class="line">&#125;</span><br><span class="line">//正常运行</span><br><span class="line">let myJson: Person = &#123;</span><br><span class="line">    name: &apos;jerry&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可选属性的含义是该属性可以不存在。  </p>
+<p>这时仍然不允许添加未定义的属性。</p>
+<h3 id="任意属性"><a href="#任意属性" class="headerlink" title="任意属性"></a>任意属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">interface Person &#123;</span><br><span class="line">    name:string;</span><br><span class="line">    age: number;</span><br><span class="line">    [params: string]: any</span><br><span class="line">&#125;</span><br><span class="line">let myJson: Person = &#123;</span><br><span class="line">    name: &apos;jerry&apos;,</span><br><span class="line">    age: 1,</span><br><span class="line">    order: &#123;</span><br><span class="line">        test: &apos;test&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用[params: string]定义了属性取string类型的值；</p>
+<p>注意：一旦定义了任意属性，那么之前定义的确定属性和可选属性都必须是他的子集；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//Property &apos;name&apos; of type &apos;string&apos; is not assignable to string index type &apos;object&apos;.</span><br><span class="line">//Property &apos;age&apos; of type &apos;number&apos; is not assignable to string index type &apos;object&apos;.</span><br><span class="line">interface Person &#123;</span><br><span class="line">    name:string;</span><br><span class="line">    age: number;</span><br><span class="line">    [params: string]: object</span><br><span class="line">&#125;</span><br><span class="line">let myJson: Person = &#123;</span><br><span class="line">    name: &apos;jerry&apos;,</span><br><span class="line">    age: 1,</span><br><span class="line">    order: &#123;</span><br><span class="line">        test: &apos;test&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="只读属性"><a href="#只读属性" class="headerlink" title="只读属性"></a>只读属性</h3><p>有时候我们希望对象中的一些字段只能在创建的时候被赋值，那么可以用 <code>readonly</code> 定义只读属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">interface Person &#123;</span><br><span class="line">    readonly id: number;</span><br><span class="line">    name:string;</span><br><span class="line">    age: number;</span><br><span class="line">    [params: string]: any</span><br><span class="line">&#125;</span><br><span class="line">let myJson: Person = &#123;</span><br><span class="line">    id: 123,</span><br><span class="line">    name: &apos;jerry&apos;,</span><br><span class="line">    age: 1,</span><br><span class="line">    order: &#123;</span><br><span class="line">        test: &apos;test&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//Cannot assign to &apos;id&apos; because it is a read-only property.</span><br><span class="line">myJson.id = 345;</span><br></pre></td></tr></table></figure>
+
+<p>readonly和const</p>
+<p>最简单判断该用<code>readonly</code>还是<code>const</code>的方法是看要把它做为变量使用还是做为一个属性。 做为变量使用的话用<code>const</code>，若做为属性则使用<code>readonly</code>。</p>
+<h2 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h2><p>在 JavaScript 中，有两种常见的定义函数的方式——函数声明（Function Declaration）和函数表达式（Function Expression）</p>
+<h3 id="用接口定义函数的形状"><a href="#用接口定义函数的形状" class="headerlink" title="用接口定义函数的形状"></a>用接口定义函数的形状</h3><p>使用接口的方式来定义一个函数需要符合的形状：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">interface SearchFunc &#123;</span><br><span class="line">    (source: string, subStr: string): boolean;</span><br><span class="line">&#125;</span><br><span class="line">let mySearch: SearchFunc = (source:string, subStr:string) =&gt; &#123;</span><br><span class="line">    return source.search(subStr) !== -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="有可选参数的函数"><a href="#有可选参数的函数" class="headerlink" title="有可选参数的函数"></a>有可选参数的函数</h3><p>与JavaScript不同，调用函数时传的参数的数量或者类型不符合函数中定义的参数要求是，TypeScript编译器会报错；如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">add = (foo:number,bar:number,foobar:number):number =&gt; &#123;</span><br><span class="line">    return foo+bar+foobar;</span><br><span class="line">&#125;</span><br><span class="line">add(); //提供的参数不匹配函数的签名</span><br><span class="line">add(1,2);//提供的参数不匹配函数的签名</span><br><span class="line">add(1,2,3); 返回6</span><br></pre></td></tr></table></figure>
+
+<p>在一些场景下我们不需要传所有的参数；TypeScript一个函数可选参数的特性；</p>
+<p>在TypeScript中通过在函数参数后面追加一个?，指定参数是可选的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">add = (foo:number,bar:number,foobar?:number):number =&gt; &#123;</span><br><span class="line">    return foo+bar+foobar;</span><br><span class="line">&#125;</span><br><span class="line">add(); //提供的参数不匹配函数的签名</span><br><span class="line">add(1,2);返回3</span><br><span class="line">add(1,2,3); 返回6</span><br></pre></td></tr></table></figure>
+
+<h3 id="有默认参数的函数"><a href="#有默认参数的函数" class="headerlink" title="有默认参数的函数"></a>有默认参数的函数</h3><p>当函数有可选参数时，我们必须检测参数是否被传递了 如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">add = (foo:number,bar:number,foobar?:number):number =&gt; &#123;</span><br><span class="line">    return foo+bar+(foobar !== undefined ? foobar : 1 );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样来做并没有错，但是可以通过提供foobar的参数的默认值，来替代标记其为可选参数，以改善可读性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">add = (foo:number,bar:number,foobar:number=1):number =&gt; &#123;</span><br><span class="line">    return foo+bar+foobar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在声明函数签名时使用=提供一个默认值，即可指定函数参数是可选的；TypeScript编译会在JavaScript输出结果中生成一个if结构，在foobar参数没有传递函数时设置一个默认值；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function add(foo, bar, foobar)&#123;</span><br><span class="line">    if(foobar === void 0)&#123;</span><br><span class="line">        foobar = 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return foo+bar+foobar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>void 0是TypeScript编译器检测一个变量是否为undefined的用法；</p>
+<h3 id="有剩余参数的函数"><a href="#有剩余参数的函数" class="headerlink" title="有剩余参数的函数"></a>有剩余参数的函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">add = (foo:number,bar:number,foobar:number=1):number =&gt; &#123;</span><br><span class="line">    return foo+bar+foobar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果想调用add传递更多个参数该如何解决呢？</p>
+<p>使用剩余参数，剩余参数语法允许把不限量的参数表示为一个数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">add = (...foo:number[]):number =&gt; &#123;</span><br><span class="line">	let res = 0;</span><br><span class="line">	for(let i=0; i &lt; foo.length; i++)&#123;</span><br><span class="line">        res += foo[i];</span><br><span class="line">	&#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;</span><br><span class="line">用...foo替换了参数foo、bar、foobar；一个剩余参数必须包含一个数组类型，否则会出现编译错误；</span><br><span class="line">add(); //return 0</span><br><span class="line">add(1); //return 1</span><br><span class="line">add(1,2,3,4,5); //return 15</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+            转载声明：
+            商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+    <a href="/2019/09/03/vuepress/" class="next-post btn btn-default" title='Vuepress从零开始'>
+        <span class="hidden-lg">下一篇</span>
+        <span class="hidden-xs">
+            Vuepress从零开始</span><i class="fa fa-angle-right fa-fw"></i>
+    </a>
+    
+</div>
+
+<div id="comments">
+    
+
+<div id="vcomments" class="valine"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+<script>
+new Valine({
+    av: AV,
+    el: '#vcomments',
+    appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+    appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+    placeholder: '说点什么吧',
+    notify: false,
+    verify: true,
+    avatar: 'mm',
+    meta: 'nick,mail'.split(','),
+    pageSize: '10',
+    path: window.location.pathname,
+    lang: 'cn'.toLowerCase()
+})
+</script>
+
+
+</div>
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">
+            Table of Contents
+        </h3>
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#类型"><span class="toc-text">类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#js类型"><span class="toc-text">js类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ts类型"><span class="toc-text">ts类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组类型"><span class="toc-text">数组类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#任意值any"><span class="toc-text">任意值any</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#any的定义"><span class="toc-text">any的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#any的属性"><span class="toc-text">any的属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类型推论"><span class="toc-text">类型推论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#联合类型"><span class="toc-text">联合类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口"><span class="toc-text">接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#接口基础用法"><span class="toc-text">接口基础用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可选属性"><span class="toc-text">可选属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#任意属性"><span class="toc-text">任意属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#只读属性"><span class="toc-text">只读属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数类型"><span class="toc-text">函数类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用接口定义函数的形状"><span class="toc-text">用接口定义函数的形状</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有可选参数的函数"><span class="toc-text">有可选参数的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有默认参数的函数"><span class="toc-text">有默认参数的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有剩余参数的函数"><span class="toc-text">有剩余参数的函数</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+<a id="back-to-top" class="icon-btn hide">
+    <i class="fa fa-chevron-up"></i>
+</a>
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy;
+                    2017
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+</body>
+</html>
